@@ -1,0 +1,12 @@
+name = "path-reverse-proxy"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+[vars]
+APP_ORIGIN = "https://your-app.replit.app"   # external app origin
+APP_PREFIX = "/us"                           # public sub-path
+
+# Route only the sub-path through the Worker (replace with your domain)
+routes = [
+  { pattern = "example.com/us*", zone_name = "example.com" }
+]
